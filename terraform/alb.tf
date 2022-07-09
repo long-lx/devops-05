@@ -22,16 +22,8 @@ module "alb" {
           target_id = "i-02bc797b8fba78dd3"
           port      = 80
         }
-        web-za-02 = {
-          target_id = "i-04038b53f58dd1a03"
-          port      = 80
-        }
         web-zb-01 = {
           target_id = "i-0aa8a699d663cea02"
-          port      = 80
-        }
-        web-zb-02 = {
-          target_id = "i-0fc57548c2fce491e"
           port      = 80
         }
       }
