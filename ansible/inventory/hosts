@@ -1,8 +1,8 @@
 [web]
-web01
-web02
-web03
-web04
+web-za-01
+web-za-02
+web-zb-01
+web-zb-02
 
-[db]
-db01
+# [db]
+# db01

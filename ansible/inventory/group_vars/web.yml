@@ -1,2 +1,7 @@
 ---
 wordpress_volume_name: wordpress-volume
+
+mysql_host: devops-05.ch172rfwssda.ap-southeast-1.rds.amazonaws.com:3306
+mysql_user: devops
+mysql_db_name: devops
+mysql_password: devops-05

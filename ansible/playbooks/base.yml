@@ -13,7 +13,7 @@
     
     - name: Set hostname
       hostname:
-        name: "{{ server_name }}"
+        name: "{{ inventory_hostname }}"
 
     - name: Install pip
       apt:

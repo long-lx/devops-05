@@ -6,3 +6,7 @@
 
 # Ansible.
 *.retry
+
+# Terraform
+*.terraform/
+terraform.tfstate*
