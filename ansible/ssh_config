@@ -2,13 +2,13 @@ Host web*
   User ubuntu
 
 Host web-za-01
-  HostName 52.221.222.32
-
-Host web-za-02
-  HostName 13.250.20.82
+  HostName 13.212.57.187
 
 Host web-zb-01
-  HostName 13.229.230.132
+  HostName 3.0.99.248
+
+Host web-za-02
+  HostName 13.229.225.137
 
 Host web-zb-02
-  HostName 18.138.251.204
+  HostName 13.250.112.209

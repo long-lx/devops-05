@@ -1,7 +1,7 @@
 ---
 - name: Deploy WordPress
   docker_container:
-    image: wordpress
+    image: wordpress # https://hub.docker.com/_/wordpress
     name: wordpress
     restart_policy: always
     ports:

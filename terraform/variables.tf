@@ -4,5 +4,6 @@ locals {
 }
 
 variable "ec2_instance_type" {
-  defdefault = "t2.micro"
+  description = "Type of Ec2 instance"
+  default     = "t2.micro"
 }

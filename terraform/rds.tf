@@ -4,16 +4,18 @@ module "db" {
   source  = "terraform-aws-modules/rds/aws"
   version = "4.5.0"
 
-  identifier        = local.name
-  engine            = "mysql"
-  engine_version    = "5.7.25"
-  instance_class    = "db.t3.small"
-  allocated_storage = 5
+  identifier          = local.name
+  engine              = "mysql"
+  engine_version      = "5.7.25"
+  instance_class      = "db.t3.small"
+  allocated_storage   = 5
+  skip_final_snapshot = true
 
   db_name  = "devops"
   username = "devops"
   port     = "3306"
 
+  # DB security group
   vpc_security_group_ids = [module.security_group_rds.security_group_id]
 
   # DB subnet group

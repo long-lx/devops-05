@@ -11,30 +11,40 @@ module "alb" {
   subnets         = module.vpc.public_subnets
   security_groups = [module.security_group.security_group_id]
 
-  target_groups = [
-    {
-      name_prefix      = "d05-"
-      backend_protocol = "HTTP"
-      backend_port     = 80
-      target_type      = "instance"
-      targets = {
-        web-za-01 = {
-          target_id = "i-02bc797b8fba78dd3"
-          port      = 80
-        }
-        web-zb-01 = {
-          target_id = "i-0aa8a699d663cea02"
-          port      = 80
-        }
-      }
-    }
-  ]
+  ## Update and un-comment the below part after creating web ec2 instances
 
-  http_tcp_listeners = [
-    {
-      port               = 80
-      protocol           = "HTTP"
-      target_group_index = 0
-    }
-  ]
+  #   target_groups = [
+  #     {
+  #       name_prefix      = "d05-"
+  #       backend_protocol = "HTTP"
+  #       backend_port     = 80
+  #       target_type      = "instance"
+  #       targets = {
+  #         web-za-01 = {
+  #           target_id = "i-0e993d9fee37a0a23" # Replace with the instance id of web-za-01
+  #           port      = 80
+  #         }
+  #         web-zb-01 = {
+  #           target_id = "i-07628ab79c99d7b6b" # Replace with the instance id of web-zb-01
+  #           port      = 80
+  #         }
+  #         web-za-02 = {
+  #           target_id = "i-0f1188957d6ba7210" # Replace with the instance id of web-za-02
+  #           port      = 80
+  #         }
+  #         web-zb-02 = {
+  #           target_id = "i-041ddfe11a1bf6650" # Replace with the instance id of web-zb-02
+  #           port      = 80
+  #         }
+  #       }
+  #     }
+  #   ]
+
+  #   http_tcp_listeners = [
+  #     {
+  #       port               = 80
+  #       protocol           = "HTTP"
+  #       target_group_index = 0
+  #     }
+  #   ]
 }
