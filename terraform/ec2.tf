@@ -9,11 +9,12 @@ resource "aws_key_pair" "devops" {
 
 # https://registry.terraform.io/modules/terraform-aws-modules/ec2-instance/aws/latest
 
+# create ec2 instances with public subnet in zone a
 module "ec2_instance_za" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 3.0"
 
-  for_each = toset(["01", "02"])
+  for_each = toset(["01"])
 
   name = "web-za-${each.key}"
 
@@ -25,11 +26,12 @@ module "ec2_instance_za" {
   associate_public_ip_address = true
 }
 
+# create ec2 instances with public subnet in zone a
 module "ec2_instance_zb" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 3.0"
 
-  for_each = toset(["01", "02"])
+  for_each = toset(["01"])
 
   name = "web-zb-${each.key}"
 

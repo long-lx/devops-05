@@ -3,7 +3,7 @@
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "~> 3.0"
+  version = "3.14.2"
 
   name = local.name
   cidr = "10.99.0.0/18"
@@ -21,7 +21,7 @@ module "security_group" {
   version = "4.9.0"
 
   name        = local.name
-  description = "Security group for Web instance"
+  description = "Security group for Web ec2 instances"
   vpc_id      = module.vpc.vpc_id
 
   ingress_cidr_blocks = ["0.0.0.0/0"]
@@ -34,7 +34,7 @@ module "security_group_rds" {
   version = "4.9.0"
 
   name        = "${local.name}-rds"
-  description = "Security group for RDS instance"
+  description = "Security group for RDS db instances"
   vpc_id      = module.vpc.vpc_id
 
   ingress_with_cidr_blocks = [

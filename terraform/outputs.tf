@@ -12,3 +12,8 @@ output "rds_endpoint" {
   description = "Endpoint of RDS instance"
   value       = module.db.db_instance_endpoint
 }
+
+output "alb_dns_name" {
+  description = "Dns name of ALB"
+  value       = module.alb.lb_dns_name
+}

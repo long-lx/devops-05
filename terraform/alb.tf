@@ -1,4 +1,4 @@
-# https://registry.terraform.io/modules/terraform-aws-modules/alb/aws/latest
+# https://registry.terraform.io/modules/terraform-aws-modules/alb/aws/7.0.0
 
 module "alb" {
   source  = "terraform-aws-modules/alb/aws"

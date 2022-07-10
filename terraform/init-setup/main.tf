@@ -18,7 +18,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket         = "devops-05-terraform-state-102"
-    key            = "test-env/terraform.tfstate"
+    key            = "init-setup/terraform.tfstate"
     region         = "ap-southeast-1"
     encrypt        = true
     dynamodb_table = "devops-05-terraform-state"
